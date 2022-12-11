@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class DepositCalculator {
     double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
         double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
+        
         return round(pay, 2);
     }
 
@@ -32,6 +33,7 @@ public class DepositCalculator {
         action = scanner.nextInt();
 
         double out = 0;
+        
         if (action == 1){
             out = calculateSimplePercent(amount, 0.06, period);
         } else if (action == 2) {
